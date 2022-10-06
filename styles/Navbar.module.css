@@ -1,0 +1,62 @@
+/* Header */
+.myNavbar {
+  background-color: var(--75-dark);
+}
+.logo {
+  width: 70px;
+  height: auto;
+}
+.navItem {
+  font-size: 18px;
+  padding: 0 10px;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+}
+.navItem:hover {
+  border-bottom: 2px solid var(--sun);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.myLogin {
+  background-color: var(--blue);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 5px 5px rgba(255, 255, 255, 0.25), inset 0 -5px 5px rgba(0, 0, 0, 0.2), inset 0 20px 10px rgba(255, 255, 255, 0.1);
+  border: 3px solid var(--sun);
+  padding: 15px 40px;
+  transition: 0.5s ease;
+}
+.myLogin:hover {
+  background-color: var(--blue);
+  border-color: white;
+  padding: 15px 45px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark);
+}
+
+.upperFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upperFooter img {
+  height: 40px;
+}
+
+.social {
+  column-gap: 5px;
+}
+
+@media (max-width: 767.98px) {
+  .upperFooter {
+    flex-direction: column;
+  }
+  .upperFooter img {
+    margin-bottom: 20px;
+  }
+}

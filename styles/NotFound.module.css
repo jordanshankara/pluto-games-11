@@ -1,0 +1,11 @@
+.notFound {
+  position: relative;
+  background-image: url('../public/assets/cover.jpg');
+  background-size: cover;
+  background-position: right;
+  padding: 200px 100px 100px 100px;
+}
+
+.four04 {
+  font-size: 6rem;
+}

@@ -1,0 +1,34 @@
+.dummy {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    min-height: 100vh;
+    background-image: url('../public/assets/dummygames.jpg');
+    background-size: cover;
+  }
+  .dummy::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .score {
+    font-size: 6em;
+    text-align: center;
+    color: white;
+  }
+/*   
+  .buttonGroup {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+  } */

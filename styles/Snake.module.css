@@ -1,0 +1,110 @@
+.snakeGame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  min-height: 100vh;
+  background-image: url('../public/assets/snakegame.jpg');
+  background-size: cover;
+}
+.snakeGame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.snakeBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  min-height: 450px;
+}
+
+.gameArea {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  border: 2px solid #000;
+  background-color: white;
+}
+
+.gameOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+.cursorBox {
+  position: fixed;
+  right: 10%;
+  z-index: 200;
+}
+
+.arrowBtn {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.snakeDot {
+  position: absolute;
+  width: 4%;
+  height: 4%;
+  background-color: yellowgreen;
+  z-index: 2;
+}
+
+.snakeDot:last-child {
+  background-color: green;
+}
+
+.snakeFood {
+  position: absolute;
+  width: 4%;
+  height: 4%;
+  background: red;
+  border: 1px solid #fff;
+  z-index: 1;
+}
+
+@media (max-width: 767.98px) {
+  .snakeBox {
+    width: 350px;
+  }
+  .gameArea {
+    height: 350px;
+  }
+  .cursorBox {
+    bottom: 50px;
+    left: auto;
+  }
+  .cursorBox .col {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .snakeBox {
+    width: 250px;
+  }
+  .gameArea {
+    height: 250px;
+  }
+}
