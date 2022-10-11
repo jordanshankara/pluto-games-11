@@ -34,7 +34,7 @@ function Header() {
     });
   };
 
-  const handleLogOut = (e) => {
+  const handleLogOut = () => {
     toggle();
     logOut();
     router.push("/login");

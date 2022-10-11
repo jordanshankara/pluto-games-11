@@ -1,5 +1,5 @@
-import { Button, Container } from 'reactstrap';
-import styles from '../styles/Navbar.module.css';
+import { Button, Container } from "reactstrap";
+import styles from "../styles/Navbar.module.css";
 import Logo from "../public/assets/pg-logo-white.png";
 import Link from "next/link";
 import Script from "next/script";

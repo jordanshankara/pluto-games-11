@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux';
-import { Button } from 'reactstrap';
+import { useSelector } from "react-redux";
+import { Button } from "reactstrap";
 
 export default function Buttons() {
   const button = useSelector((state) => state.button);

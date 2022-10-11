@@ -93,16 +93,16 @@ class SnakeBox extends Component {
     }
   };
 
-  toUp = (e) => {
+  toUp = () => {
     this.changeDirection("DOWN", "UP");
   };
-  toLeft = (e) => {
+  toLeft = () => {
     this.changeDirection("RIGHT", "LEFT");
   };
-  toRight = (e) => {
+  toRight = () => {
     this.changeDirection("LEFT", "RIGHT");
   };
-  toDown = (e) => {
+  toDown = () => {
     this.changeDirection("UP", "DOWN");
   };
 
