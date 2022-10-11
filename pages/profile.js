@@ -11,7 +11,6 @@ import {
   Input,
   Button,
   Form,
-  FormText,
   Modal,
   ModalHeader,
   ModalBody,
@@ -24,7 +23,6 @@ import {
   ADD_URL,
   CROP,
   EDIT,
-  EDITOR,
   SCALE,
   USER,
   VIEW,
@@ -32,21 +30,14 @@ import {
 import Buttons from "../components/Button";
 import { buttonProcess, ProcessTime } from "../middlewares/button";
 import ImageCrop from "../components/CropImage";
-import { async } from "@firebase/util";
 
 export default function Profile(args) {
   const currentUser = useAuth();
   const [profilePic, setProfilePic] = useState(null);
-  // const [modal, setModal] = useState(false);
   const [editor, setEditor] = useState(null);
+  const [edited, setEdited] = useState(null);
   const dispatch = useDispatch();
   const profile = useSelector((state) => state.profile);
-  // const edit = useSelector((state) => state.profile.editToggle);
-  // const user = useSelector((state) => state.profile.user.username);
-  // const modal = useSelector((state) => state.profile.modal);
-  // const pictureURL = useSelector((state) => state.profile.pictureURL);
-  // const editor = useSelector((state) => state.profile.editor);
-  // const scaleValue = useSelector((state) => state.profile.scaleValue);
 
   const toggle = () => {
     dispatch({
@@ -71,7 +62,7 @@ export default function Profile(args) {
     setEditor(editor);
   };
 
-  const onCrop = async () => {
+  const onCrop = () => {
     if (editor != null) {
       const url = editor.getImageScaledToCanvas().toDataURL();
       dispatch({
@@ -87,24 +78,11 @@ export default function Profile(args) {
           return res.blob();
         })
         .then((blob) => {
-          return blob;
+          setEdited(blob);
+          return;
         });
     }
   };
-
-  // const pictureLink = async () => {
-  //   if (profile.pictureURL != null) {
-  //     const res = await fetch(url);
-  //     const blobFile = await res.blob();
-  //     console.log(blobFile);
-  //     return blobFile;
-  //   }
-  // };
-
-  // console.log(pictureLink);
-
-  const imageCropBlob = onCrop();
-  console.log(imageCropBlob);
 
   const onScaleChange = (e) => {
     const imageScale = parseFloat(e.target.value);
@@ -139,10 +117,10 @@ export default function Profile(args) {
           contentType: "image/png",
         };
 
-        await uploadBytes(profilePicRef, profilePic, metadata);
+        await uploadBytes(profilePicRef, edited, metadata);
         const photoURL = await getDownloadURL(profilePicRef);
 
-        await editUser(profile.user, photoURL);
+        await editUser(profile.user.username, photoURL);
         dispatch({
           type: EDIT,
         });
@@ -153,7 +131,6 @@ export default function Profile(args) {
     }
   };
 
-  console.log(profile.modal);
   return (
     <Container fluid className={styles.profileContainer}>
       <ToastContainer theme="dark" />
@@ -205,9 +182,6 @@ export default function Profile(args) {
                         className="w-100"
                         accept="image/png"
                       />
-                      {/* <FormText className="text-secondary">
-                        PNG Format Recommended
-                      </FormText> */}
                     </Col>
                   </>
                 ) : (

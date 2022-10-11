@@ -64,7 +64,7 @@ export default function Games() {
                                 played.length !== 0 &&
                                 played.map((item) => {
                                   if (item == i) {
-                                    return "text-danger ";
+                                    return " text-danger ";
                                   }
                                 })
                               }

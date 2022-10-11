@@ -13,7 +13,7 @@ import styles from "../../styles/GameDetails.module.css";
 import { useAuth } from "../../services/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchGameDetails } from "../../middlewares/game-details";
-import { PLAYED, NEW } from "../../redux/actions/history";
+import { PLAYED } from "../../redux/actions/history";
 
 export default function GameDetails() {
   const games = useSelector((state) => state.gameDetails.gameDetails);
