@@ -22,7 +22,7 @@ export default function GameDetails() {
   const { id } = router.query;
   const currentUser = useAuth();
 
-  const gamePlayed = (e) => {
+  const gamePlayed = () => {
     dispatch({
       type: PLAYED,
       payload: id,

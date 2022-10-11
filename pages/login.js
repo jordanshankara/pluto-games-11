@@ -85,7 +85,7 @@ export default function Login() {
     dispatch(buttonProcess());
     setTimeout(() => {
       signIn(login.email, login.password)
-        .then((userCredential) => {
+        .then(() => {
           dispatch({
             type: ON_SUBMIT,
           });
@@ -107,6 +107,7 @@ export default function Login() {
     setTimeout(() => {
       signup(register.email, register.password)
         .then((userCredential) => {
+          const user = userCredential.user;
           dispatch({
             type: ON_SUBMIT,
           });
@@ -124,7 +125,7 @@ export default function Login() {
 
   const popupSignIn = (provider) => {
     signInWithPopup(auth, provider)
-      .then((result) => {
+      .then(() => {
         toast.success("Register Success");
         router.push("/");
       })

@@ -92,13 +92,13 @@ export default function Profile(args) {
     });
   };
 
-  const editTrue = (e) => {
+  const editTrue = () => {
     dispatch({
       type: VIEW,
     });
   };
 
-  const editFalse = (e) => {
+  const editFalse = () => {
     dispatch({
       type: EDIT,
     });

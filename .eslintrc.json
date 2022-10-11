@@ -8,6 +8,6 @@
   "rules": {
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
-    "camelcase": "always"
+    "camelcase": "warn"
   }
 }
