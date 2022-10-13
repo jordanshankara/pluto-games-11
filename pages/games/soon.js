@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { Button, Container } from "reactstrap";
 import styles from "../../styles/NotFound.module.css";

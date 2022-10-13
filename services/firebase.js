@@ -1,9 +1,16 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile, sendPasswordResetEmail } from 'firebase/auth';
-import { getStorage, ref } from 'firebase/storage';
-import { getDatabase } from 'firebase/database';
-import { useEffect, useState } from 'react';
+import { initializeApp } from "firebase/app";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+  updateProfile,
+  sendPasswordResetEmail,
+} from "firebase/auth";
+import { getStorage, ref } from "firebase/storage";
+import { getDatabase } from "firebase/database";
+import { useEffect, useState } from "react";
 
 const firebaseConfigure = {
   apiKey: "AIzaSyBMnCFoXNSEQmhO5XVv-LIJmQiNjnHKUtE",
@@ -20,6 +27,9 @@ const app = initializeApp(firebaseConfigure);
 const auth = getAuth(app);
 const storage = getStorage(app);
 
+export function exportAuth() {
+  return getAuth(app);
+}
 // Initialize Firebase
 export function signup(email, password) {
   return createUserWithEmailAndPassword(auth, email, password);
