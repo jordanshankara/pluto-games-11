@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useAuth, storageRef, editUser } from "../services/firebase";
 import { getDownloadURL, uploadBytes } from "firebase/storage";
 import "react-toastify/dist/ReactToastify.css";

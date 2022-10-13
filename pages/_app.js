@@ -1,7 +1,7 @@
+import React from "react";
 import "../styles/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AppLayout from "../components/AppLayout";
-// import { wrapper } from '../redux/index';
 import { Provider } from "react-redux";
 import store from "../redux/index";
 import "react-toastify/dist/ReactToastify.css";

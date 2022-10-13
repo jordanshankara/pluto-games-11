@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Container,
   Row,
@@ -37,7 +38,7 @@ export default function Home() {
         }
       >
         <img src={Logo.src} alt="Logo" className={styles.logo} />
-        <h4 className="text-capitalize my-4 text-center">
+        <h4 className="text-capitalize my-4 text-center" id="slogan">
           Play fun and challenging games with your friends.
         </h4>
         <Link href="/games" className="text-decoration-none text-dark">

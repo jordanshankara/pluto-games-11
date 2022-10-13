@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -48,7 +48,9 @@ export default function GameDetails() {
             " d-flex align-items-center flex-column justify-content-end p-3 p-md-5"
           }
         >
-          <h1 className="mb-3 text-white">{games?.name}</h1>
+          <h1 className="mb-3 text-white" id="title">
+            {games?.name}
+          </h1>
 
           <div className="d-flex mb-4">
             <div className="d-inline-block">
@@ -73,6 +75,7 @@ export default function GameDetails() {
               <Button
                 color="warning"
                 outline
+                id="playnow"
                 className="px-4 py-2 px-md-5 py-md-3 text-uppercase fw-bold"
               >
                 Play Now
