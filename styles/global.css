@@ -26,3 +26,7 @@
 .Toastify {
   z-index: 99999 !important;
 }
+
+audio::-webkit-media-controls-panel{
+  background-color:white !important;
+  }
