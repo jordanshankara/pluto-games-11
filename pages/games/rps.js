@@ -15,8 +15,8 @@ import {
 } from "../../redux/actions/rps";
 import { TOTAL_SCORE } from "../../redux/actions/score";
 import { toast, ToastContainer } from "react-toastify";
-import { useEffect } from "react";
 import MusicPlayer from "../../components/AudioPlayer";
+import React, { useEffect } from "react";
 
 const actions = {
   rock: "scissors",

@@ -5,7 +5,7 @@ import { useAuth } from "../../services/firebase";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { SCORE } from "../../redux/actions/dummy";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { TOTAL_SCORE } from "../../redux/actions/score";
 import MusicPlayer from "../../components/AudioPlayer";
 

@@ -1,3 +1,4 @@
+import React from "react";
 import loading from "../public/assets/loading.gif";
 
 export default function Loading() {

@@ -12,7 +12,7 @@ import {
 import styles from "../../styles/Games.module.css";
 import plutogame from "../../public/assets/pg-logo-white.png";
 import Loading from "../../components/Loading.js";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { fetchGames } from "../../middlewares/games";
