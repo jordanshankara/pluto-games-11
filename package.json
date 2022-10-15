@@ -15,7 +15,6 @@
     "react-toastify": "^9.0.8",
     "reactstrap": "^9.1.4",
     "redux": "^4.2.0",
-    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.4.1",
     "video-react": "^0.15.0"
   },
@@ -24,17 +23,19 @@
     "start": "next start",
     "build": "next build",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest --transformIgnorePatterns 'node_modules' "
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.4.3",
+    "enzyme": "^3.11.0",
     "eslint": "^8.24.0",
     "eslint-config-next": "^12.3.1",
     "firebase-functions-test": "^2.4.0",
     "firebase-mock": "^2.3.2",
     "jest": "^29.1.2",
-    "jest-environment-jsdom": "^29.1.2"
+    "jest-environment-jsdom": "^29.1.2",
+    "redux-mock-store": "^1.5.4"
   }
 }
