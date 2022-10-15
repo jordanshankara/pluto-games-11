@@ -10,35 +10,28 @@ function MusicPlayer({ link }) {
     <div
       className={
         styles.audioPlayer +
-        " d-flex justify-content-center align-items-center rounded bg-white px-2"
+        " d-flex justify-content-center align-items-center bg-light rounded-circle p-2"
       }
-      style={{ width: `${toggle ? "50px" : "fit-content"}` }}
     >
       <Button
-        className="rounded"
+        className={styles.audioBtn + " rounded-circle"}
         outline
-        color={toggle ? "primary" : "danger"}
+        color={toggle ? "danger" : "primary"}
         onClick={() => setToggle(!toggle)}
       >
         {toggle ? (
-          <i className="fa-solid fa-caret-right"></i>
+          <i className="fa-solid fa-volume-xmark"></i>
         ) : (
-          <i className="fa-solid fa-caret-left"></i>
+          <i className="fa-solid fa-volume-up"></i>
         )}
       </Button>
-      <span
-        className="ms-2"
-        style={{ display: `${toggle ? "none" : "block"}` }}
-      >
-        BGM
-      </span>
+
       <ReactAudioPlayer
-        style={{ opacity: `${toggle ? 0 : 1}` }}
         src={link}
         autoPlay
-        controls
         loop
-        volume={0.3}
+        volume={0.2}
+        muted={toggle ? true : false}
       />
     </div>
   );

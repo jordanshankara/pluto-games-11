@@ -96,7 +96,7 @@ function Header() {
             outline
             className="me-3 text-white"
           >
-            <i className="fa-solid fa-circle-chevron-left"></i>
+            <i className="fa-solid fa-arrow-left"></i>
           </Button>
           <Link href="/" className="me-3">
             <img src={Logo.src} alt="Platinum Team 2" className={styles.logo} />
