@@ -25,7 +25,7 @@ export default function Footer() {
               rel="noreferrer"
               target="_blank"
             >
-              <Button color="warning" outline>
+              <Button color="warning" outline className={styles.socialBtn}>
                 <i className="fab fa-facebook-f"></i>
               </Button>
             </Link>
@@ -35,7 +35,7 @@ export default function Footer() {
               rel="noreferrer"
               target="_blank"
             >
-              <Button color="warning" outline>
+              <Button color="warning" outline className={styles.socialBtn}>
                 <i className="fab fa-twitter"></i>
               </Button>
             </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
               rel="noreferrer"
               target="_blank"
             >
-              <Button color="warning" outline>
+              <Button color="warning" outline className={styles.socialBtn}>
                 <i className="fab fa-instagram"></i>
               </Button>
             </Link>
@@ -55,7 +55,7 @@ export default function Footer() {
               rel="noreferrer"
               target="_blank"
             >
-              <Button color="warning" outline>
+              <Button color="warning" outline className={styles.socialBtn}>
                 <i className="fab fa-github"></i>
               </Button>
             </Link>
