@@ -37,6 +37,8 @@
   text-align: justify;
 }
 .desc {
+  position: relative;
+  padding-top: 56.25%;
   flex-basis: 60%;
   min-height: 400px;
   z-index: 10;
@@ -50,6 +52,12 @@
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 30px;
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .listGroup {
@@ -76,5 +84,8 @@
   .lead {
     flex-basis: 100%;
     min-height: max-content;
+  }
+  .reactPlayer {
+    position: relative;
   }
 }
