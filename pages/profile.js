@@ -1,35 +1,15 @@
-import React, { useState } from "react";
-import { useAuth, storageRef, editUser } from "../services/firebase";
-import { getDownloadURL, uploadBytes } from "firebase/storage";
-import "react-toastify/dist/ReactToastify.css";
-import { toast, ToastContainer } from "react-toastify";
-import {
-  Container,
-  FormGroup,
-  Col,
-  Label,
-  Input,
-  Button,
-  Form,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Row,
-} from "reactstrap";
-import styles from "../styles/Profile.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  ADD_URL,
-  CROP,
-  EDIT,
-  SCALE,
-  USER,
-  VIEW,
-} from "../redux/actions/profile";
-import Buttons from "../components/Button";
-import { buttonProcess, ProcessTime } from "../middlewares/button";
-import ImageCrop from "../components/CropImage";
+import React, { useState } from 'react';
+import { useAuth, storageRef, editUser } from '../services/firebase';
+import { getDownloadURL, uploadBytes } from 'firebase/storage';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
+import { Container, FormGroup, Col, Label, Input, Button, Form, Modal, ModalHeader, ModalBody, ModalFooter, Row } from 'reactstrap';
+import styles from '../styles/Profile.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { ADD_URL, CROP, EDIT, SCALE, USER, VIEW } from '../redux/actions/profile';
+import Buttons from '../components/Button';
+import { buttonProcess, ProcessTime } from '../middlewares/button';
+import ImageCrop from '../components/CropImage';
 
 export default function Profile(args) {
   const currentUser = useAuth();
@@ -114,7 +94,7 @@ export default function Profile(args) {
         const profilePicRef = storageRef(`profile-pictures/${Date.now()}.png`);
 
         const metadata = {
-          contentType: "image/png",
+          contentType: 'image/png',
         };
 
         await uploadBytes(profilePicRef, edited, metadata);
@@ -124,7 +104,7 @@ export default function Profile(args) {
         dispatch({
           type: EDIT,
         });
-        toast.success("Update Success!");
+        toast.success('Update Success!');
       }, ProcessTime);
     } catch (error) {
       toast.error(error.message);
@@ -134,20 +114,17 @@ export default function Profile(args) {
   return (
     <Container fluid className={styles.profileContainer}>
       <ToastContainer theme="dark" />
-      <h1 className="mb-4 text-white">My Profile Page</h1>
+      <h1 className="mb-4 text-white" id="profileTitle">
+        My Profile Page
+      </h1>
 
-      <div className={styles.profileData + " p-3 p-md-4 p-lg-5"}>
+      <div className={styles.profileData + ' p-3 p-md-4 p-lg-5'}>
         {currentUser ? (
           <>
             {profile.editToggle ? (
-              ""
+              ''
             ) : (
-              <Button
-                className="w-100 mb-4"
-                outline
-                color="warning"
-                onClick={editTrue}
-              >
+              <Button className="w-100 mb-4" outline color="warning" onClick={editTrue}>
                 Edit Profile
               </Button>
             )}
@@ -164,7 +141,7 @@ export default function Profile(args) {
                   </Col>
                 </FormGroup>
               ) : (
-                ""
+                ''
               )}
 
               <FormGroup row>
@@ -174,14 +151,7 @@ export default function Profile(args) {
                       <Label for="username">Profile Picture</Label>
                     </Col>
                     <Col xs="12" md={8}>
-                      <Input
-                        type="file"
-                        name="profilePic"
-                        onChange={handleProfilePic}
-                        onClick={toggle}
-                        className="w-100"
-                        accept="image/png"
-                      />
+                      <Input type="file" name="profilePic" onChange={handleProfilePic} onClick={toggle} className="w-100" accept="image/png" />
                     </Col>
                   </>
                 ) : (
@@ -203,14 +173,7 @@ export default function Profile(args) {
                 <Col xs="12" md={8} className="text-white">
                   {profile.editToggle ? (
                     <>
-                      <Input
-                        id="username"
-                        name="username"
-                        placeholder={currentUser?.displayName}
-                        className="w-100"
-                        type="text"
-                        onChange={onInputChange}
-                      />
+                      <Input id="username" name="username" placeholder={currentUser?.displayName} className="w-100" type="text" onChange={onInputChange} />
                     </>
                   ) : (
                     <div>{currentUser?.displayName}</div>
@@ -223,16 +186,12 @@ export default function Profile(args) {
                   <Label for="email">Email</Label>
                 </Col>
 
-                <Col
-                  xs="12"
-                  md={4}
-                  className="text-white d-flex align-items-center"
-                >
+                <Col xs="12" md={4} className="text-white d-flex align-items-center">
                   {currentUser?.email}
                 </Col>
               </FormGroup>
               <FormGroup row>
-                <Col>{profile.editToggle ? <Buttons /> : ""}</Col>
+                <Col>{profile.editToggle ? <Buttons /> : ''}</Col>
               </FormGroup>
             </Form>
             {profile.editToggle ? (
@@ -240,17 +199,12 @@ export default function Profile(args) {
                 Back
               </Button>
             ) : (
-              ""
+              ''
             )}
             <Modal isOpen={profile.modal} {...args}>
               <ModalHeader toggle={toggle}>Adjust your Picture</ModalHeader>
               <ModalBody>
-                <ImageCrop
-                  imageSrc={profilePic}
-                  setEditorRef={setEditorRef}
-                  scaleValue={profile.scaleValue}
-                  onScaleChange={onScaleChange}
-                ></ImageCrop>
+                <ImageCrop imageSrc={profilePic} setEditorRef={setEditorRef} scaleValue={profile.scaleValue} onScaleChange={onScaleChange}></ImageCrop>
               </ModalBody>
               <ModalFooter>
                 <Row className="w-100">

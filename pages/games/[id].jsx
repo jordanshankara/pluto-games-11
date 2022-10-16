@@ -80,9 +80,9 @@ export default function GameDetails() {
           <Col className="d-flex flex-column">
             <section className={styles.desc + ' p-4 '}>
               {games?.name === 'Rock Paper Scissors' ? (
-                <ReactPlayer className={styles.reactPlayer} volume="0" muted={true} url="https://www.youtube.com/embed/ifRZ8mUw0VU?controls=0" width="100%" height="100%" />
+                <ReactPlayer className={styles.reactPlayer} volume={0} muted={true} url="https://www.youtube.com/embed/ifRZ8mUw0VU?controls=0" width="100%" height="100%" />
               ) : (
-                <ReactPlayer className={styles.reactPlayer} volume="0" muted={true} url="https://www.youtube.com/embed/XAK0L08Dz7k?controls=0" width="100%" height="100%" />
+                <ReactPlayer className={styles.reactPlayer} volume={0} muted={true} url="https://www.youtube.com/embed/XAK0L08Dz7k?controls=0" width="100%" height="100%" />
               )}
             </section>
           </Col>
