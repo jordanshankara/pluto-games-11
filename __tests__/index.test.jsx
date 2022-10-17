@@ -6,7 +6,6 @@ describe("Home", () => {
   it("renders a heading", () => {
     const { container } = render(<Home />);
     const titleText = container.querySelector("#slogan")?.textContent;
-    console.log(titleText);
     expect(titleText).toEqual(
       "Play fun and challenging games with your friends."
     );

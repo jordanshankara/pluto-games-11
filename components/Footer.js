@@ -62,7 +62,10 @@ export default function Footer() {
           </section>
         </Container>
 
-        <Container className="text-white text-center p-3 border-top">
+        <Container
+          className="text-white text-center p-3 border-top"
+          id="copyright"
+        >
           © 2020 Copyright Platinum Team 2
         </Container>
       </footer>
