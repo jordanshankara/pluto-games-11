@@ -14,6 +14,7 @@ function MusicPlayer({ link }) {
       }
     >
       <Button
+        id="toggleAudio"
         className={styles.audioBtn + " rounded-circle"}
         outline
         color={toggle ? "danger" : "primary"}
