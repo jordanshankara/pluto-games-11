@@ -1,5 +1,6 @@
-import { Button, Container } from 'reactstrap';
-import styles from '../styles/Navbar.module.css';
+import React from "react";
+import { Button, Container } from "reactstrap";
+import styles from "../styles/Navbar.module.css";
 import Logo from "../public/assets/pg-logo-white.png";
 import Link from "next/link";
 import Script from "next/script";
@@ -24,7 +25,7 @@ export default function Footer() {
               rel="noreferrer"
               target="_blank"
             >
-              <Button color="warning" outline>
+              <Button color="warning" outline className={styles.socialBtn}>
                 <i className="fab fa-facebook-f"></i>
               </Button>
             </Link>
@@ -34,7 +35,7 @@ export default function Footer() {
               rel="noreferrer"
               target="_blank"
             >
-              <Button color="warning" outline>
+              <Button color="warning" outline className={styles.socialBtn}>
                 <i className="fab fa-twitter"></i>
               </Button>
             </Link>
@@ -44,7 +45,7 @@ export default function Footer() {
               rel="noreferrer"
               target="_blank"
             >
-              <Button color="warning" outline>
+              <Button color="warning" outline className={styles.socialBtn}>
                 <i className="fab fa-instagram"></i>
               </Button>
             </Link>
@@ -54,14 +55,17 @@ export default function Footer() {
               rel="noreferrer"
               target="_blank"
             >
-              <Button color="warning" outline>
+              <Button color="warning" outline className={styles.socialBtn}>
                 <i className="fab fa-github"></i>
               </Button>
             </Link>
           </section>
         </Container>
 
-        <Container className="text-white text-center p-3 border-top">
+        <Container
+          className="text-white text-center p-3 border-top"
+          id="copyright"
+        >
           © 2020 Copyright Platinum Team 2
         </Container>
       </footer>

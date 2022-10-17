@@ -1,9 +1,11 @@
-import { EDIT, PROFILE_PIC, USER, VIEW } from "../actions/profile";
+import { ADD_URL, CROP, EDIT, SCALE, USER, VIEW } from "../actions/profile";
 
 const initialState = {
   user: "",
-  profilePic: null,
   editToggle: false,
+  modal: false,
+  pictureURL: "",
+  scaleValue: 1,
 };
 
 function ProfileReducer(state = initialState, action) {
@@ -12,13 +14,6 @@ function ProfileReducer(state = initialState, action) {
       return {
         ...state,
         user: action.payload,
-      };
-    }
-
-    case PROFILE_PIC: {
-      return {
-        ...state,
-        profilePic: action.payload,
       };
     }
 
@@ -33,6 +28,26 @@ function ProfileReducer(state = initialState, action) {
       return {
         ...state,
         editToggle: true,
+      };
+    }
+
+    case CROP: {
+      return {
+        ...state,
+        modal: action.payload,
+      };
+    }
+    case ADD_URL: {
+      return {
+        ...state,
+        pictureURL: action.payload,
+      };
+    }
+
+    case SCALE: {
+      return {
+        ...state,
+        scaleValue: action.payload,
       };
     }
 

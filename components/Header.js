@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../styles/Navbar.module.css";
 import Link from "next/link";
 import Head from "next/head";
@@ -19,6 +20,7 @@ import {
 import { useAuth, logOut } from "../services/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { TOGGLE } from "../redux/actions/header";
+import { getAuth } from "firebase/auth";
 
 function Header() {
   const isOpen = useSelector((state) => state.header.isOpen);
@@ -27,6 +29,10 @@ function Header() {
   const router = useRouter();
   const currentUser = useAuth();
 
+  const auth = getAuth();
+  const user = auth.currentUser;
+  console.log(user);
+
   const toggle = () => {
     dispatch({
       type: TOGGLE,
@@ -34,7 +40,7 @@ function Header() {
     });
   };
 
-  const handleLogOut = (e) => {
+  const handleLogOut = () => {
     toggle();
     logOut();
     router.push("/login");
@@ -90,7 +96,7 @@ function Header() {
             outline
             className="me-3 text-white"
           >
-            <i className="fa-solid fa-circle-chevron-left"></i>
+            <i className="fa-solid fa-arrow-left"></i>
           </Button>
           <Link href="/" className="me-3">
             <img src={Logo.src} alt="Platinum Team 2" className={styles.logo} />

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pluto-games",
+  "private_key_id": "616dc376314c6829f169521a93f5b4be7409be35",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDaGZqwsbHzYCDy\nlin9pXcCgvT2/ndlpIIqKbI1bBpz9aBM/qD8dViAUxQt6mpKKUsezDhNhOoGXpHH\n5p+o9eiJ4baX8k0Lx7m1ttfaEB97Uq8DuM9fTzQzYWiZEpTNtojd9UUsV6j2skwx\nIB7aAwmQ8N3EQks5RYZQEqwE781UuyOgXiBqtnO/JjgRO5P84ZCUM0AHRpRXgXYr\ncdcnK6Eiae3iiwifRhUTr9/tRID+YrDV3R56m+2FWFXPAB5TfP61dlDjcqZsVWgw\nntA791GEhj2UvgBk418XIND/SLYnHnqheFC38gnUJzxoNxLGDsn8maf/OO+bKGzr\nKrEjualPAgMBAAECggEAOuwG7CydmFREonUqNAIDZHTPzHjT9exbVBu+rwsdHG3k\nGFkEUiA7wDNxtLPrcky0pEXlAiBh/0WGWfy27rU81R9bLrLB2OhlBjA3IY0QjEc6\nzCUeNTAXOLhcw1oPRIJHeLueLAwktD1YMz9rxldiurswFqkYXIkpb7GTsqO8k+KZ\nGUfn0SB7gvzlXbgnj07Zs+2oYq9hpBqsH1atSRhPSJ9Vw0KogOXNH7WTcMg/aQaY\npzFzsANTIGXUYtAjqxcHmIvORRhlYMVyCYNPsNcVlq8/1bNDis/U679T8LsWCXIH\nHDU21UsAJ7fOxiI7eqdhvR01gZThn0+WeNVTIS6SoQKBgQD8e0q7PYY9xUVIiWbX\noN6rgaxZXeG+wJaMs5VYf7WHiPcDTlNeopV8/JLsH3x4DIHD4Gs15p94irl4JUH0\nROPPxYQyB6EevJ0dN9szG3xICklaVidPScMNQjr5fekjpwytK7EcyJNn52gH8E6C\nY/4El2HCrWUuvfEK/Y/hTeboIQKBgQDdI6ijKweWPjvgVS58EaiG+lFXVYO+FGpT\npWjNDY+HC9DvrKAAg82BDqqRFqpXTrfnSWfVHB2NFByuno0mNwPZr+x4RfGMpLKX\ndZTuPuXd5RN97N+W6av7HSqcwFG7ORVNATxTXkrpVz5c44ZsYeEqxfDuKgnIbFzM\nOvKdBQ6jbwKBgArz4kMLITauxxmldEOoY+B2yJ47114qBp3l8HWdXKebhnOrQyyY\nyvlYD5uUphajHEH+C0iUT5iwE+mlXB4XmvZZcCmncRLfRcWNtcGa0KJjZ9k2YZAr\n9/0sQVivYJy+U2tzuMQx40sfm8C0aQN5CPz0ADasxPXpIXrDkylH8tthAoGAUz8c\nOah2J7Hv2mhWonAHUCClREo12PVYfXqUNDT5pe3lzoPei7MSRpYd0ZaFs243vsKc\natY1rak3juiy3ALz2Rvn2fMCll5duLSTxwg4gkq9BreICAiZLGPzaaTgX6mCgkWH\nzx589tBX8qHYNa63E+IF67I5kpBwcpVyRXfk5dMCgYEAta53p/q8OHKqzR73TzqA\n+BHQ1Zyk+z3kA3rqBLw5hZ+t7EMNeGGXA3Y7jmBC/ABi7KizpDlSlA78anEUiHiM\nSggvy1FpRvGxGbpGoAAKon4J0cZKI57+2la5/mInefeBQcqwwEXxtsGo3WIwAFuo\nq/ueTyU9YRa7/bLdDhDbeJQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "pluto-games@pluto-games.iam.gserviceaccount.com",
+  "client_id": "110973577861381988977",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pluto-games%40pluto-games.iam.gserviceaccount.com"
+}

@@ -1,4 +1,4 @@
-.profile-container {
+.profileContainer {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,15 +9,16 @@
   background-size: cover;
 }
 
-.profile-data {
+.profileData {
   background-color: black;
   width: clamp(250px, 80%, 900px);
   border-radius: 20px;
 }
 
-.profile-data .img-box {
-  height: 150px;
+.imgBox {
   width: 150px;
-  background-size: cover;
+  height: 150px;
+  background-size: contain;
+  background-color: gray;
   background-position: center;
 }

@@ -15,7 +15,8 @@ import {
 } from "../../redux/actions/rps";
 import { TOTAL_SCORE } from "../../redux/actions/score";
 import { toast, ToastContainer } from "react-toastify";
-import { useEffect } from "react";
+import MusicPlayer from "../../components/AudioPlayer";
+import React, { useEffect } from "react";
 
 const actions = {
   rock: "scissors",
@@ -177,6 +178,7 @@ function Rps() {
   return (
     <Container fluid id="rps" className={styles.rps + " min-vh-100"}>
       <ToastContainer theme="dark" />
+      <MusicPlayer link="https://firebasestorage.googleapis.com/v0/b/pluto-games-10.appspot.com/o/bgm%2FDAY6%20-%20You%20Were%20Beautiful.mp3?alt=media&token=f542ab6f-2bc7-40cf-9bbc-ff92f445f8db" />
       {currentUser ? (
         <>
           <div>

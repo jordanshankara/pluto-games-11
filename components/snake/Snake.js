@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../../styles/Snake.module.css';
+import React from "react";
+import styles from "../../styles/Snake.module.css";
 
 const Snake = (props) => {
   return (

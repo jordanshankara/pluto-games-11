@@ -5,8 +5,9 @@ import { useAuth } from "../../services/firebase";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { SCORE } from "../../redux/actions/dummy";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { TOTAL_SCORE } from "../../redux/actions/score";
+import MusicPlayer from "../../components/AudioPlayer";
 
 export default function DummyGames() {
   const score = useSelector((state) => state.dummy.score);
@@ -50,6 +51,7 @@ export default function DummyGames() {
   return (
     <Container fluid id="dummy" className={styles.dummy}>
       <ToastContainer theme="dark" />
+      <MusicPlayer link="https://firebasestorage.googleapis.com/v0/b/pluto-games-10.appspot.com/o/bgm%2FProject%20DMM%20-%20Kimi%20Ni%20Dekiru%20Nanika.mp3?alt=media&token=b873dd6d-5dd5-44b0-ba75-72b38d300d24" />
       {currentUser ? (
         <Container className="d-flex align-items-center flex-column">
           <h2 className="text-white text-center">Shuffle Your Number</h2>
