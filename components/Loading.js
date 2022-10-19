@@ -1,6 +1,7 @@
 import React from "react";
 import loading from "../public/assets/loading.gif";
+import Image from "next/image";
 
 export default function Loading() {
-  return <img src={loading.src} alt="Loading"></img>;
+  return <Image src={loading} alt="Loading" />;
 }

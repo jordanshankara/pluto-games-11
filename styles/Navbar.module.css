@@ -2,10 +2,7 @@
 .myNavbar {
   background-color: var(--75-dark);
 }
-.logo {
-  width: 70px;
-  height: auto;
-}
+
 .navItem {
   font-size: 18px;
   padding: 0 10px;

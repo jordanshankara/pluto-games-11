@@ -120,38 +120,26 @@ export default function GameDetails() {
           className="d-flex flex-row justify-content-center align-items-center"
         >
           <Col className="d-flex flex-column">
-            <section className={styles.desc + " p-4 "}>
-              {games?.name === "Rock Paper Scissors" ? (
-                <ReactPlayer
-                  className={styles.reactPlayer}
-                  volume={0}
-                  muted={true}
-                  url="https://www.youtube.com/embed/ifRZ8mUw0VU?controls=0"
-                  width="100%"
-                  height="100%"
-                />
-              ) : (
-                <ReactPlayer
-                  className={styles.reactPlayer}
-                  volume={0}
-                  muted={true}
-                  url="https://www.youtube.com/embed/XAK0L08Dz7k?controls=0"
-                  width="100%"
-                  height="100%"
-                />
-              )}
-            </section>
+            <div className={styles.desc + " p-4 "}>
+              <ReactPlayer
+                className={styles.reactPlayer}
+                muted={true}
+                url={games?.trailer}
+                width="100%"
+                height="100%"
+              />
+            </div>
           </Col>
 
           <Col className="d-flex flex-column">
-            <section className={styles.desc + " p-4 "}>
+            <div className={styles.desc + " p-4 "}>
               <h2 className="mb-3">Description</h2>
               <p className="lh-lg">{games?.description}</p>
-            </section>
+            </div>
           </Col>
 
           <Col className="d-flex flex-column mt-5">
-            <section
+            <div
               className={
                 styles.lead + " w-100 p-6 d-flex flex-column text-center"
               }
@@ -174,7 +162,7 @@ export default function GameDetails() {
                   Fifth Player
                 </ListGroupItem>
               </ListGroup>
-            </section>
+            </div>
           </Col>
         </Row>
       </Container>

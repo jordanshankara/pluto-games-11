@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Container,
   Col,
@@ -118,11 +119,12 @@ export default function Games() {
           " d-flex align-items-center justify-content-center flex-column m-0"
         }
       >
-        <img
+        <Image
           className={styles.pgLogo}
-          src={plutogame.src}
+          src={plutogame}
           alt="Logo"
-          width="200px"
+          width={200}
+          height={100}
         />
         <h1 className="text-white text-center mt-4">Discover our games!</h1>
       </Container>
