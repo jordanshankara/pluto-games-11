@@ -1,0 +1,33 @@
+image: node:16.17.1
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - install
+  - test
+  - deploy
+
+Install:
+  stage: install
+  script:
+    - npm install
+
+Test:
+  only:
+    - master
+  stage: test
+  script:
+    - npm run test
+
+Production:
+  image: ruby:latest
+  only:
+    - master
+  stage: deploy
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
