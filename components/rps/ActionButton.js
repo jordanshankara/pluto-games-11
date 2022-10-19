@@ -11,7 +11,10 @@ export function ActionButton({ action, onActionSelected }) {
       block
     >
       <ActionIcon action={action} />
-      <span className="text-uppercase fw-bold d-none d-md-inline-block ms-2">
+      <span
+        className="text-uppercase fw-bold d-none d-md-inline-block ms-2"
+        id="actionText"
+      >
         {action}
       </span>
     </Button>
