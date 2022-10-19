@@ -29,10 +29,6 @@ function Header() {
   const router = useRouter();
   const currentUser = useAuth();
 
-  const auth = getAuth();
-  const user = auth.currentUser;
-  console.log(user);
-
   const toggle = () => {
     dispatch({
       type: TOGGLE,

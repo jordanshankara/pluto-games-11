@@ -23,7 +23,7 @@
     "start": "next start",
     "build": "next build",
     "lint": "next lint",
-    "test": "jest --transformIgnorePatterns 'node_modules' --silent"
+    "test": "jest --transformIgnorePatterns 'node_modules'"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

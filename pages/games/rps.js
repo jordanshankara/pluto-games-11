@@ -1,7 +1,4 @@
 import styles from "../../styles/Rps.module.css";
-import FaHandRock from "../../public/assets/batu.png";
-import FaHandPaper from "../../public/assets/kertas.png";
-import FaHandScissors from "../../public/assets/gunting.png";
 import { Container, Button, Row, Col } from "reactstrap";
 import { useAuth } from "../../services/firebase";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,6 +14,8 @@ import { TOTAL_SCORE } from "../../redux/actions/score";
 import { toast, ToastContainer } from "react-toastify";
 import MusicPlayer from "../../components/AudioPlayer";
 import React, { useEffect } from "react";
+import { Player } from "../../components/rps/Player";
+import { ActionButton } from "../../components/rps/ActionButton";
 
 const actions = {
   rock: "scissors",
@@ -43,49 +42,11 @@ function calculateWinner(action1, action2) {
   return null;
 }
 
-function ActionIcon({ action, ...props }) {
-  const icons = {
-    rock: FaHandRock,
-    paper: FaHandPaper,
-    scissors: FaHandScissors,
-  };
-  const Icon = icons[action];
-  return <img src={Icon.src} {...props} alt="Choice" />;
-}
-
-function Player({ name = "Player", action = "rock" }) {
-  return (
-    <Col className="d-flex justify-content-center align-items-start">
-      <div className={styles.player}>
-        <div className="p-3 w-100 fw-bold">
-          <span className="text-white">{`${name}`}</span>
-        </div>
-        <div>{action && <ActionIcon action={action} className="w-100" />}</div>
-      </div>
-    </Col>
-  );
-}
 function Score({ score = 0 }) {
   return (
     <Col className={styles.scores}>
       <h4 className="text-white">{`Your Score: ${score}`}</h4>
     </Col>
-  );
-}
-
-function ActionButton({ action, onActionSelected }) {
-  return (
-    <Button
-      color="light"
-      className={styles.roundBtn}
-      onClick={() => onActionSelected(action)}
-      block
-    >
-      <ActionIcon action={action} />
-      <span className="text-uppercase fw-bold d-none d-md-inline-block ms-2">
-        {action}
-      </span>
-    </Button>
   );
 }
 
@@ -137,7 +98,7 @@ function Rps() {
     if (newWinner === -1) {
       dispatch({
         type: DETERMINER,
-        payload: playerScore + 1,
+        payload: playerScore + 3,
       });
     } else if (newWinner === 1) {
       if (playerScore > 0) {

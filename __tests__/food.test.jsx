@@ -3,12 +3,20 @@ import "@testing-library/jest-dom";
 import Food from "../components/snake/Food";
 
 describe("Snake Food Component", () => {
-  it("renders snake food", () => {
-    const props = { food: [0, 0] };
+  it("not rendering snake food", () => {
+    const props = [null, null];
 
-    const { container } = render(<Food dot={props.food} />);
+    const { container } = render(<Food dot={props} />);
     const food = container.querySelector("#snakeFood");
 
-    expect(food).toBeTruthy();
+    expect(food.style[0]).toEqual(undefined);
+  });
+  it("renders snake food", () => {
+    const props = [0, 0];
+
+    const { container } = render(<Food dot={props} />);
+    const food = container.querySelector("#snakeFood");
+
+    expect(food.style[0]).toEqual("left");
   });
 });
