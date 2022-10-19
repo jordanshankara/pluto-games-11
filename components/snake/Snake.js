@@ -3,7 +3,7 @@ import styles from "../../styles/Snake.module.css";
 
 const Snake = (props) => {
   return (
-    <div>
+    <div id="snakeBody">
       {props.snakeDots.map((dot, i) => {
         const style = {
           left: `${dot[0]}%`,

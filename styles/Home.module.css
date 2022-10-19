@@ -22,11 +22,6 @@
   z-index: 10;
 }
 
-.logo {
-  width: clamp(120px, 50%, 300px);
-  height: auto;
-}
-
 .homeSlider {
   background-color: var(--dark);
   padding: 10%;
