@@ -7,7 +7,7 @@ const Food = (props) => {
     top: `${props.dot[1]}%`,
   };
 
-  return <div className={styles.snakeFood} style={style}></div>;
+  return <div id="snakeFood" className={styles.snakeFood} style={style}></div>;
 };
 
 export default Food;
