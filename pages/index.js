@@ -25,6 +25,7 @@ import carouselfortnite from "../public/assets/carouselfortnite.png";
 import carouselrockpaperscissor from "../public/assets/rps.jpg";
 import carouselstray from "../public/assets/carouselstray.jpg";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
           " text-white d-flex flex-column justify-content-center align-items-center"
         }
       >
-        <img src={Logo.src} alt="Logo" className={styles.logo} />
+        <Image src={Logo.src} alt="Logo" width={180} height={90} />
         <h4 className="text-capitalize my-4 text-center" id="slogan">
           Play fun and challenging games with your friends.
         </h4>

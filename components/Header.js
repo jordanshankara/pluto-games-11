@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/Navbar.module.css";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Logo from "../public/assets/pg-logo-white.png";
 import {
@@ -20,7 +21,6 @@ import {
 import { useAuth, logOut } from "../services/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { TOGGLE } from "../redux/actions/header";
-import { getAuth } from "firebase/auth";
 
 function Header() {
   const isOpen = useSelector((state) => state.header.isOpen);
@@ -28,10 +28,6 @@ function Header() {
   const dispatch = useDispatch();
   const router = useRouter();
   const currentUser = useAuth();
-
-  const auth = getAuth();
-  const user = auth.currentUser;
-  console.log(user);
 
   const toggle = () => {
     dispatch({
@@ -99,7 +95,7 @@ function Header() {
             <i className="fa-solid fa-arrow-left"></i>
           </Button>
           <Link href="/" className="me-3">
-            <img src={Logo.src} alt="Platinum Team 2" className={styles.logo} />
+            <Image src={Logo} alt="Platinum Team 2" width={70} height={35} />
           </Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />

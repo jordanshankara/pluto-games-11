@@ -3,8 +3,8 @@ import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import MusicPlayer from "../components/AudioPlayer";
 
-describe("Coming Soon", () => {
-  it("renders a heading", () => {
+describe("Audio Player", () => {
+  it("renders a button", () => {
     jest.spyOn(React, "useState").mockReturnValue(["", () => {}]);
 
     const { container } = render(<MusicPlayer />);

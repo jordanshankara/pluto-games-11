@@ -4,6 +4,7 @@ import styles from "../styles/Navbar.module.css";
 import Logo from "../public/assets/pg-logo-white.png";
 import Link from "next/link";
 import Script from "next/script";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
       <footer className={styles.footer}>
         <Container className={styles.upperFooter + " d-flex py-3"}>
           <section className="d-flex justify-content-center align-items-center">
-            <img src={Logo.src} alt="Platinum Team 2" />
+            <Image src={Logo} alt="Platinum Team 2" width={70} height={35} />
           </section>
           <section
             className={
