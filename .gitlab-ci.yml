@@ -14,9 +14,12 @@ Install:
   script:
     - npm install
 
+Lint:
+  stage: lint
+  script:
+    - npm run lint
+
 Test:
-  only:
-    - master
   stage: test
   script:
     - npm run test
